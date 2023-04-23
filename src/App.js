@@ -1,41 +1,35 @@
-import React, {useState} from "react";
-import LoginForm from "./components/LoginForm";
+import React, {useState, useEffect} from "react";
+import Article from "./components/Article.js";
 
 
 function App() {
-  const adminUser = {
-    email: "admin@email.com",
-    password: "admin123"
-  }
+  const [articles, setArticles] = useState([]);
+  const [subreddit, setSubreddit] =useState("webdev");
 
-  const [user, setUser] = useState({name:"", email:""});
-  const [error, setError] = useState("")
-
-  const Login = details => {
-    if( details.email == adminUser.email && details.password == adminUser.password) {
-      console.log("Login successful")
-      setUser({name:details.name, email: details.email})
-    } else {
-      console.log("Details do not match")
-    }
-  };
-
-  const Logout = () => {
-    setUser({name:"", email:""})
-  };
+  useEffect(() => {
+    fetch("https://www.reddit.com/r/"+ subreddit +".json").then(res => {
+      if(res.status !== 200) {
+        console.log("Erorr#")
+        return
+      }
+      res.json().then(data => {
+        if(data != null) {
+          setArticles(data.data.children)
+        }
+      })
+    })
+  }, [subreddit]) 
 
   return (
     <div className="App">
-      {
-        (user.email != "") ? (
-          <div className= "welcome">
-            <h2>Welcome <span>{user.name}</span></h2>
-            <button onClick={Logout}>Logout</button>
-          </div>
-        ) : (
-          <LoginForm Login={Login} error={error}/>
-        )
-      }  
+      <header className="App-header">
+        <input type="text" className="input" value={subreddit} onChange={e => setSubreddit(e.target.value)}/>
+      </header>
+      <div className="articles">
+        {
+          (articles != null) ? articles.map((article, index) => <Article key={index} article={article.data}/>) : ""
+        }
+      </div>
     </div>
   );
 }
