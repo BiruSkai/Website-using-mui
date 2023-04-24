@@ -1,25 +1,31 @@
 import React, {useState, useEffect} from "react";
-import Board from "./components/Board";
-import Card from "./components/Card";
-
+import Popup from "./components/Popup";
 
 function App() {
-  
+  const [buttonPopup, setButtonPopup] = useState(false);  
+  const [timePopup, setTimePopup] = useState(false);
 
+  useEffect(() => {
+    setTimeout(() => {
+      setTimePopup(true)
+    }, 2000)
+  }, [])
   return (
     <div className="App">
-      <main className="flexbox">
-        <Board id="board-1" className="board" >
-          <Card id="card-1" className="card" draggable="true">
-            <p>Card One</p>
-          </Card>
-        </Board>
-        <Board id="board-2" className="board" >
-          <Card id="card-2" className="card" draggable="true">
-            <p>Card Two</p>
-          </Card>
-        </Board>
-      </main> 
+      <main>
+        <h1>React Popups</h1>
+        <br></br>
+        <button onClick= {() => setButtonPopup(true)}>Open Popup</button>
+      </main>
+      
+      <Popup trigger={buttonPopup} setTrigger={setButtonPopup}>
+        <h3>My Button Popup</h3>
+        <p>This is my triggered button Popup</p>
+      </Popup>
+      <Popup trigger={timePopup} setTrigger={setTimePopup}>
+        <h3>My Time Popup</h3>
+        <p>This is my triggered time Popup</p>
+      </Popup>
     </div>
   );
 }
