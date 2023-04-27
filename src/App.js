@@ -1,25 +1,17 @@
 import React from 'react';
-import Navbar from "./components/Navbar";
-import {BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import "./App.css";
-import Home from "./components/pages/Home";
-import Services from "./components/pages/Services";
-import Products from "./components/pages/Products";
-import SignUp from "./components/pages/SignUp";
+import LoginPage from "./loginPage/LoginPage";
+import HeaderArea from "./headerArea/HeaderArea";
+import {Route, Switch} from "react-router-dom";
 
 function App() {
   return (
-    <>
-    <Router>
-      <Navbar />
+    <div className="app">
       <Switch>
-        <Route path="/" exact component={Home}/>
-        <Route path="/services" component={Services}/>
-        <Route path="/products" component={Products}/>
-        <Route path="/sign-up" component={SignUp}/>
+        <Route path="/loginPage" exact={true} component={LoginPage}/>
+        <Route path="/headerArea" component={HeaderArea}/>
       </Switch>
-    </Router>
-    </>
+    </div>
   )
 }
 
