@@ -1,0 +1,241 @@
+.main {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        
+}
+
+.left-side {
+        height: 50rem;
+        width: 21%;
+        left: 0;
+        flex-wrap: wrap;
+        
+}
+
+.left-side-profile {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 550;
+}
+
+.left-side-profile >img {
+        width: 3rem
+}
+
+.left-icon {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        font-size: 1rem;
+        font-weight: 550;
+        padding-left: 1rem;
+        padding: 1.2rem;
+}
+
+.left-icon >div {
+        margin: 10px;
+}
+
+.pros {
+        display: flex;
+        align-items: center;
+        font-size: 1.8rem;
+        font-weight: 550;
+        padding-left: 1rem;
+        padding: 0 15px;
+        border-bottom: .1rem solid rgb(68, 68, 62);
+}
+
+.left-side-icon2 {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 550;
+        padding: 0 15px;
+}
+
+.mid-side {
+        display: flex;
+        flex-direction: column;
+        height: 40rem;
+        width: 50%;
+}
+
+.add-story {
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-size: 1.5rem;
+        height: 13rem;
+        position: relative;
+        z-index: -1;
+        top: 1rem;
+        
+}
+
+.story {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 145px;
+        margin: 0 1px;
+        background-image: linear-gradient(white, blue, red);
+        border-radius: .5rem;
+        height: auto;
+        
+}
+
+.story >img {
+        padding-top: 1rem;
+}
+
+.message {
+        display: flex;
+        height: 20rem;
+        width: 80%;
+}
+
+.post {
+        display: flex;
+        align-items: center;
+        height: 5rem;
+        width: 47.5rem;
+        background-color: white;
+}
+
+.post >div {
+        width: 100%;
+}
+
+.post >img {
+        height: 50px;
+        width: 45px;
+        border-radius: 50%;
+        margin: 12px;
+}
+
+.post >input[type=mind] {
+        height: 3rem;
+        width: 25rem;
+        border-radius: 12px;
+        margin: 15px 0;
+        display: inline;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+}
+
+input[type=mind]::placeholder {
+        padding: 4px 8px;
+}
+
+.call{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        background-color: white;
+}
+
+.icone {
+        width: 10rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+}
+
+.ico {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        padding-bottom: 1rem;
+}
+
+.posted {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        background-color: white;
+        padding: 1rem;
+        border-top: 1px solid grey
+}
+
+.subposter {
+        font-size: 1rem;
+}
+
+.subposter-profile {
+        display: flex;
+        align-items: center;
+}
+
+.profile-name {
+        margin-left: 1rem;
+        font-weight: 550;
+}
+
+.update {
+        margin-top: 0.7rem;
+        font-size: 0.9rem;
+}
+
+.caption {
+        font-size: 1rem;
+}
+
+.comment {
+        font-size: 1rem;
+        display: flex;
+        justify-content: space-around;
+}
+
+.like {
+        display: flex;
+        align-items: center;
+}
+
+.right-side {
+        height: 50rem;
+        width: 21%;
+        left: 0;
+        flex-wrap: wrap;
+        padding-top: 1rem;
+}
+
+.contact {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.contacts {
+        font-size: 1.6rem;
+        font-weight: 550;
+        padding-left: 1rem; 
+}
+
+.icons {
+        display: flex;
+        align-items: center;
+        padding: 2px 20px;
+}
+
+.chat-icon {
+        display: flex;
+}
+
+.profilee {
+        display: flex;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 550;
+}
+
+.profilee >img {
+        border-radius: 80%;
+        width: 10%;
+}
+
+
